@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Notas</title>
+    <style>
+      body {
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+      }
+
+      .container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+      }
+
+      input {
+        width: 80%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+
+      button {
+        width: 70%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .resultado-nota {
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 8px 12px;
+        border-radius: 6px;
+        display: inline-block;
+        margin-top: 10px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .aprovado {
+        color: #155724;
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+      }
+    
+      .reprovado {
+        color: #721c24;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+      }
+
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Calculadora de Notas</h2>
+      <input type="text" id="nomeAluno" placeholder="Nome do aluno" />
+      <input type="number" id="nota1" placeholder="Nota 1" />
+      <input type="number" id="nota2" placeholder="Nota 2" />
+      <button id="calcularBtn">Calcular Média</button>
+      <p id="resultado"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

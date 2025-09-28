@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrinho de Compras</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:30px;
+    background: linear-gradient(to right, #99a6f1, #63c3e9);
+    margin:0;
+  }
+
+  .container {
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    width:360px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.1);
+    text-align:center;
+  }
+
+  h2 {
+    margin-bottom:15px;
+    color:#333;
+  }
+
+  input {
+    width:80%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:14px;
+    outline:none;
+    transition:all 0.3s ease;
+  }
+
+  input:focus {
+    border-color:#74ebd5;
+    box-shadow:0 0 5px rgba(116,235,213,0.6);
+  }
+
+  button {
+    width:80%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:25px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#fff;
+    background: linear-gradient(90deg, rgb(116,235,213), rgb(172,182,229));
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:transform 0.2s ease;
+  }
+
+  button:hover {
+    transform:scale(1.05);
+  }
+
+  .produto {
+    border-bottom:1px solid #eee;
+    padding:8px;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    color:#555;
+  }
+
+  .produto:last-child {
+    border-bottom:none;
+  }
+
+  p {
+    font-size:16px;
+    font-weight:bold;
+    margin-top:15px;
+    color:#333;
+  }
+
+  .error {
+    font-size: 14px;
+    color: rgb(212, 6, 6);
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: #f1bec3;
+  }
+
+  .produto {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    color: #2f3235;
+    background-color: #e6e9ff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    font-size: 15px;
+  }
+
+   .excluir {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 40px;
+  }
+
+  .excluir:hover {
+    background-color: red;
+  }
+
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Carrinho</h2>
+  <input type="text" id="nomeProduto" placeholder="Produto">
+  <input type="number" id="precoProduto" placeholder="Preço">
+
+  <button id="adicionarBtn">Adicionar ao Carrinho</button>
+
+  <ul id="listaCarrinho"></ul>
+  <p>Total: R$ <span id="total">0</span></p>
+  <p id="error"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+

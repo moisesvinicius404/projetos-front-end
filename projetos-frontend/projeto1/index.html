@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Tarefas</title>
+<style>
+  body { 
+    font-family: Arial; 
+    background: #f4f4f4; 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    height:100vh; 
+}
+  .container { 
+    background:#fff; 
+    padding:20px; 
+    border-radius:10px; 
+    width:300px; 
+}
+
+h2 {
+    text-align: center;
+}
+  input { 
+    width:81%; 
+    padding:10px; 
+    margin:5px 0; 
+}
+
+  #adicionarBtn { 
+    width:90%; 
+    padding:10px; 
+    margin:5px 0; 
+    cursor: pointer;
+}
+
+  ul { 
+    list-style:none; 
+    padding:0; 
+    color:rgb(54, 54, 59);
+    margin-left: 5px;
+    margin-bottom: 3px;
+    }
+
+  .tarefa {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f1f1f1;
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 5px;
+  }
+
+  .tarefa span.concluida {
+      text-decoration: line-through;
+      color: gray;
+  }
+
+  .botoes {
+      display: flex;
+      gap: 5px;
+  }
+
+  .concluir {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .excluir {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Lista de Tarefas</h2>
+    <input type="text" id="tarefaInput" placeholder="Nova tarefa">
+    <button id="adicionarBtn">Adicionar</button>
+    <ul id="listaTarefas"></ul>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
+,
